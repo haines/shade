@@ -6,8 +6,11 @@
            [org.codehaus.plexus.logging Logger]
            [org.codehaus.plexus.logging.console ConsoleLogger]))
 
+(defn- namespace-pattern [namespace]
+  (str (namespace-munge namespace) "."))
+
 (defn- relocator [[namespace shaded-namespace]]
-  (SimpleRelocator. (namespace-munge namespace) (namespace-munge shaded-namespace) [] []))
+  (SimpleRelocator. (namespace-pattern namespace) (namespace-pattern shaded-namespace) [] []))
 
 (defn- shade-request [jar shaded-jar relocations]
   (doto (ShadeRequest.)
