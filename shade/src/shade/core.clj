@@ -6,17 +6,23 @@
            [org.codehaus.plexus.logging Logger]
            [org.codehaus.plexus.logging.console ConsoleLogger]))
 
-(defn- namespace-pattern [namespace]
-  (str (namespace-munge namespace) "."))
+(defn- namespace-pattern [namespace suffix]
+  (str (namespace-munge namespace) suffix))
 
-(defn- relocator [[namespace shaded-namespace]]
-  (SimpleRelocator. (namespace-pattern namespace) (namespace-pattern shaded-namespace) [] []))
+(defn- relocator [namespace shaded-namespace suffix]
+  (SimpleRelocator. (namespace-pattern namespace suffix)
+                    (namespace-pattern shaded-namespace suffix)
+                    []
+                    []))
+
+(defn- relocators [[namespace shaded-namespace]]
+  (map #(relocator namespace shaded-namespace %) ["." "$" "__init"]))
 
 (defn- shade-request [jar shaded-jar relocations]
   (doto (ShadeRequest.)
     (.setJars #{(io/as-file jar)})
     (.setUberJar (io/as-file shaded-jar))
-    (.setRelocators (map relocator relocations))
+    (.setRelocators (mapcat relocators relocations))
     (.setFilters [])
     (.setResourceTransformers [])
     (.setShadeSourcesContent false)))
