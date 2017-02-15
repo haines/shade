@@ -1,4 +1,4 @@
-(defproject shade "0.3.0-SNAPSHOT"
+(defproject shade "0.3.0"
   :description "Library for relocating namespaces within uberjars"
   :url "https://github.com/redbadger/shade"
   :scm {:dir ".."}
