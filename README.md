@@ -69,7 +69,18 @@ You can deploy your shaded uberjar using `lein deploy-shaded-jar [repository]`.
 You might want to alias the `deploy` task:
 
 ```clojure
-:aliases {"deploy" ["deploy-shaded-jar" "clojars"]}
+:aliases {...
+          "deploy" ["deploy-shaded-jar" "clojars"]
+          ...}
+```
+
+You can also install your shaded uberjar to your local repository using `lein install-shaded-jar`.
+Similarly, you might want to alias the `install` task:
+
+```clojure
+:aliases {...
+          "install" ["install-shaded-jar"]
+          ...}
 ```
 
 ## License

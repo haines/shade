@@ -3,6 +3,9 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/) and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
+### Added
+- `lein-shade`: added `install-shaded-jar` task to install artifacts to local repositories.
+
 ### Fixed
 - `shade`: handle loader classes (`*__init.class`) and function classes (`*$fn__1234.class`) in the top-level namespace.
 
