@@ -3,10 +3,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/) and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
+### Changed
+- `shade`: update `maven-shade-plugin` to 3.2.4 ([#1](https://github.com/haines/shade/pull/1)).
 
 ## [0.3.0] - 2017-02-15
 ### Added
-- `lein-shade`: added `install-shaded-jar` task to install artifacts to local repositories.
+- `lein-shade`: add `install-shaded-jar` task to install artifacts to local repositories.
 
 ### Fixed
 - `shade`: handle loader classes (`*__init.class`) and function classes (`*$fn__1234.class`) in the top-level namespace.
