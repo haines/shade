@@ -20,6 +20,6 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 - `lein-shade`: a Leiningen plugin for relocating namespaces within uberjars.
 - `shade`: a library to perform the relocations.
 
-[Unreleased]: https://github.com/redbadger/shade/compare/0.3.0...HEAD
-[0.3.0]: https://github.com/redbadger/shade/compare/0.2.0...0.3.0
-[0.2.0]: https://github.com/redbadger/shade/compare/0.1.0...0.2.0
+[Unreleased]: https://github.com/haines/shade/compare/0.3.0...HEAD
+[0.3.0]: https://github.com/haines/shade/compare/0.2.0...0.3.0
+[0.2.0]: https://github.com/haines/shade/compare/0.1.0...0.2.0
