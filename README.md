@@ -12,7 +12,7 @@ To avoid this, the helper library can be distributed as an uberjar with its depe
 The easiest way to get started is to add the lein-shade plugin to your Leiningen project map:
 
 ```clojure
-:plugins [[lein-shade "0.3.0"]]
+:plugins [[lein-shade "0.4.0"]]
 ```
 
 ## Usage
